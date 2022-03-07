@@ -1,0 +1,8 @@
+<form #loginform = "ngForm">
+    <!--{{ loginform.value | json }} Esto muestra los datos en tiempo real-->
+    <br>
+    Nombre de usuario: <input type="text" name = 'username' ngModel>
+    Contraseña: <input type="password" name = 'password' ngModel>
+  </form>
+<br>
+<button mat-raised-button color="primary" (click)="getFormData(loginform.value.username, loginform.value.password)">Iniciar Sesión</button>
