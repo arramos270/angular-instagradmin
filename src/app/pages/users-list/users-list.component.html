@@ -4,7 +4,6 @@
         <h1 style="margin: 10px;">Lista de usuarios: </h1>
 
         <ul style="list-style: none;">
-            <app-user-item *ngFor="let user of listaUsuarios; let i = index" [userInput]='user'></app-user-item>
-            <button (makeAdminEvent)="makeAdmin($event)"></button>
+            <app-user-item *ngFor="let user of listaUsuarios; let i = index" [userInput]='user'></app-user-item>           
         </ul>
     </div>

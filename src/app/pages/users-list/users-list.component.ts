@@ -14,21 +14,22 @@ export class UsersListComponent implements OnInit {
   listaUsuarios: User[] = [];
 
   constructor() {
-    this.listaUsuarios = this.repository.userList;
    }
 
   ngOnInit(): void {
+    this.listaUsuarios = this.repository.userList;
     this.getUsers();
-0  }
-
-  getUsers(){
-    this.repository.userList.forEach;
   }
 
-  makeAdmin(newAdmin: User){
-    this.repository.userList.forEach(usuario => {
+  getUsers(){
+    this.listaUsuarios.forEach;
+  }
+
+  changeAdmin(newAdmin: User){
+    this.listaUsuarios.forEach(usuario => {
       if(newAdmin.id == usuario.id) {
-        usuario.isAdmin = true;
+        !usuario.isAdmin;
+        this.repository.userList = this.listaUsuarios;
       }
     });
   }
