@@ -8,8 +8,6 @@ import { UsersListComponent } from './pages/users-list/users-list.component';
 import { PostsListComponent } from './pages/posts-list/posts-list.component';
 import { MaterialImportsModule } from './modules/material-imports.module';
 import { HttpClient } from '@angular/common/http';
-import { UserSelectedComponent } from './components/user-selected/user-selected.component';
-import { UserItemComponent } from './components/user-item/user-item.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +15,6 @@ import { UserItemComponent } from './components/user-item/user-item.component';
     LoginComponent,
     UsersListComponent,
     PostsListComponent,
-    UserSelectedComponent,
-    UserItemComponent
   ],
   imports: [
     BrowserModule,

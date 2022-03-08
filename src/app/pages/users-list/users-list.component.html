@@ -1,3 +1,11 @@
+<mdb-navbar SideClass="navbar navbar-light blue-grey lighten-4">
+  <mdb-navbar-brand>
+    <span class="navbar-brand">Miarmagramm</span>
+    <img [src]="{{loggedUser.avatar}}" alt="Mi foto">
+    <button (click)="redirectToLogin()">Salir</button>
+  </mdb-navbar-brand>
+</mdb-navbar>
+
 <div fxFlexFill fxLayout="row">
     <!--Lista de personas-->
     <div fxFlex="20" style="background-color: darkcyan;">

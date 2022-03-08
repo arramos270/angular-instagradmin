@@ -1,9 +1,0 @@
-<li style="padding: 5px;">{{userInput?.username}} 
-    <div *ngIf="userInput.isAdmin = false; else elseBlock">
-        <button (makeAdminEvent)="changeAdmin($event)">Hacer Admin</button>
-    </div>
-
-    <ng-template #elseBlock>
-        <button (makeAdminEvent)="changeAdmin($event)">Quitar Admin</button>
-    </ng-template>
-</li>
