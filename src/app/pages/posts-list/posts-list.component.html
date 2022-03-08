@@ -1,1 +1,62 @@
-<p>posts-list works!</p>
+<mdb-navbar SideClass="navbar navbar-light blue-grey lighten-4">
+    <mdb-navbar-brand>
+      <span class="navbar-brand">Miarmagramm</span>
+      <img [src]="{{loggedUser.avatar}}" alt="Mi foto">
+      <button (click)="redirectToLogin()">Salir</button>
+    </mdb-navbar-brand>
+  </mdb-navbar>
+  
+  <div fxFlexFill fxLayout="row">
+      <!--Lista de posts-->
+      <div fxFlex="20" style="background-color: darkcyan;">
+          <h1 style="margin: 10px;">Lista de posts: </h1>  
+      </div>
+  </div>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- Content Column -->
+      <ng-container matColumnDef="content">
+        <th mat-header-cell *matHeaderCellDef> Contenido </th>
+        <td mat-cell *matCellDef="let element"> {{element.content}} </td>
+      </ng-container>
+    
+      <!-- Title Column -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Título </th>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      </ng-container>
+    
+      <!-- Creator Column -->
+      <ng-container matColumnDef="creator">
+        <th mat-header-cell *matHeaderCellDef> Creador </th>
+        <td mat-cell *matCellDef="let element"> {{element.creator.username}} </td>
+      </ng-container>
+    
+        <!-- isPublic Column -->
+        <ng-container matColumnDef="isPublic">
+          <th mat-header-cell *matHeaderCellDef> Privacidad </th>
+          <td mat-cell *matCellDef="let element">
+            <div *ngIf="element.isPublic = true; else elseBlock">
+                Post Público
+            </div>
+            <ng-template #elseBlock>
+                Post Privado
+            </ng-template>
+        </ng-container>
+
+        <div *ngIf="loggedUser.isAdmin = true">
+            <ng-container>
+                <th mat-header-cell *matHeaderCellDef></th>
+                <button (click)="deletePost(element)">Borrar Post</button>
+            </ng-container>
+        </div>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+  
