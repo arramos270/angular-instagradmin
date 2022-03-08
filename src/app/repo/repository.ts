@@ -7,10 +7,10 @@ export class Repository {
 
     //Users
     userList: User[] = [];
-    user1: User = {fullname: "admin", username: "admin", password: "1234", avatar: "http://avatar/1", postsList: [], followers: [], myFollows: [], createdAt: this.actualDate, lastEdit:this.actualDate, isPublic: false, isAdmin: true};
-    user2: User = {fullname: "Juan Martínez Pérez", username: "juan21", password: "aaaa", avatar: "http://avatar/2", postsList: [], followers: [], myFollows: [], createdAt: new Date("03/01/2022"), lastEdit: new Date("03/03/2022"), isPublic: false, isAdmin: false};
-    user3: User = {fullname: "Maria José Ramos", username: "maria95", password: "1111", avatar: "http://avatar/3", postsList: [], followers: [], myFollows: [], createdAt: new Date("14/05/2020"), lastEdit: this.actualDate, isPublic: true, isAdmin: false};
-    user4: User = {fullname: "Jose María Sánchez", username: "jose17", password: "abcd", avatar: "http://avatar/4", postsList: [], followers: [], myFollows: [], createdAt: this.actualDate, lastEdit: this.actualDate, isPublic: true, isAdmin: false};
+    user1: User = {id: 1, fullname: "admin", username: "admin", password: "1234", avatar: "http://avatar/1", postsList: [], followers: [], myFollows: [], createdAt: this.actualDate, lastEdit:this.actualDate, isPublic: false, isAdmin: true};
+    user2: User = {id: 2, fullname: "Juan Martínez Pérez", username: "juan21", password: "aaaa", avatar: "http://avatar/2", postsList: [], followers: [], myFollows: [], createdAt: new Date("03/01/2022"), lastEdit: new Date("03/03/2022"), isPublic: false, isAdmin: false};
+    user3: User = {id: 3, fullname: "Maria José Ramos", username: "maria95", password: "1111", avatar: "http://avatar/3", postsList: [], followers: [], myFollows: [], createdAt: new Date("14/05/2020"), lastEdit: this.actualDate, isPublic: true, isAdmin: false};
+    user4: User = {id: 4, fullname: "Jose María Sánchez", username: "jose17", password: "abcd", avatar: "http://avatar/4", postsList: [], followers: [], myFollows: [], createdAt: this.actualDate, lastEdit: this.actualDate, isPublic: true, isAdmin: false};
 
     //Comments
     c1: Comment = {creator: this.user3, text: "Que guay!", createdAt: this.actualDate };
