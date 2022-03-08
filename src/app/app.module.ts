@@ -7,7 +7,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { UsersListComponent } from './pages/users-list/users-list.component';
 import { PostsListComponent } from './pages/posts-list/posts-list.component';
 import { MaterialImportsModule } from './modules/material-imports.module';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog/dialog-module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import { HttpClient } from '@angular/common/http';
     BrowserModule,
     MaterialImportsModule,
     HttpClient,
+    HttpClientModule,
+    MatDialogModule,
     AppRoutingModule
   ],
   providers: [],

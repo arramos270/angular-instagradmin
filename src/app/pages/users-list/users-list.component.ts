@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from 'app/models/interfaces/user.interface';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { User } from 'src/app/models/interfaces/user.interface';
 
 const actualDate = new Date();
 
